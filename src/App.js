@@ -12,6 +12,8 @@ import { Route, Switch } from "react-router-dom";
 // import firebase from "firebase";
 import fire from "././config";
 import Register from "./components/Register";
+import Footer from "./components/footer";
+import About from "./components/AboutUs";
 
 class App extends Component {
   render() {
@@ -26,6 +28,8 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
+          <Route path="/footer" component={Footer} />
+          <Route path="/Aboutus" component={About} />
         </Switch>
       </div>
     );

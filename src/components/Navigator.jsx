@@ -1,4 +1,4 @@
-import logo from "../images/logo.png";
+import logo from "../images/logo.gif";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -11,23 +11,18 @@ class Navigator extends Component {
   render() {
     return (
       <div>
-        <Navbar expand="lg navbar-dark bg-dark">
+        <Navbar expand="lg navbar" style={{ backgroundColor:"orangered"}}>
           <Link to={"/"}>
             <img
               src={logo}
               alt="logo"
-              style={{ width: "30px", height: "30px", margin: "0.5%" }}
+              style={{ width: "40px", height: "40px", margin: "0.5%" }}
             />
           </Link>
           <Link to={"/"}>Corona Tracker</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto ">
-              <Nav.Item>
-                <Nav.Link>
-                  <Link to={"/"}>Home</Link>
-                </Nav.Link>
-              </Nav.Item>
               <Nav.Item>
                 <Nav.Link>
                   <Link to={"/covid"}>What is COVID-19</Link>
@@ -41,6 +36,11 @@ class Navigator extends Component {
               <Nav.Item>
                 <Nav.Link>
                   <Link to={"/profile"}>Profile</Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link>
+                  <Link to={"/AboutUs"}>AboutUs</Link>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>

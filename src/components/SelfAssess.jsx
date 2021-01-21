@@ -18,6 +18,7 @@ import {
 } from "../redux/Action/actionQuiz";
 // import "../styles/selfaccess.css";
 import { Link } from "react-router-dom";
+import Footer from "./footer";
 
 class SelfAssess extends Component {
   state = {

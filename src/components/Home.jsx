@@ -20,8 +20,9 @@ import {
   Badge,
 } from "reactstrap";
 import numeral from "numeral";
-import logo from "../images/download.jpg";
-import di from "../images/dropdown.png";
+import logo from "../images/world.gif";
+import live from "../images/live.gif";
+import di from "../images/dropdown.gif";
 // import { sortData } from "../util";
 import { connect } from "react-redux";
 import {
@@ -30,7 +31,10 @@ import {
   update,
   news,
 } from "../redux/Action/action1";
-import noimage from "../images/No-Image-Available.png";
+import noimage from "../images/NoImage.gif";
+import m1 from "../images/im.jpg";
+import m2 from "../images/im2.gif";
+import m3 from "../images/im3.jpg";
 import { Link } from "react-router-dom";
 
 import React, { Component } from "react";
@@ -76,16 +80,30 @@ class Home extends Component {
                       }}
                     >
                       <img
-                        style={{ heigth: "60%", width: "60%" }}
-                        src="https://i.ibb.co/7QpKsCX/image.png"
+                        style={{ heigth: "4%", width: "5%" }}
+                        src={m1}
                         alt="logo"
-                      />{" "}
+                      />
+                      
+                      <img
+                        style={{ heigth: "20%", width: "10%" }}
+                        src={m2}
+                        alt="logo"
+                      />
+                      
+                      <img
+                        style={{ heigth: "20%", width: "20%" }}
+                        src={m3}
+                        alt="logo"
+                      />
+                      
+                      {" "}
                       TRACKER{" "}
                     </div>
                   </Col>
                   <Col>
                     <div>
-                      <Dropdown
+                      <Dropdown size="sm"
                         isOpen={this.state.isopen}
                         toggle={this.state.toggle}
                       >
@@ -126,7 +144,7 @@ class Home extends Component {
                               this.setState({ isopen: false });
                             }}
                           >
-                            worldwide
+                            WorldWide
                           </DropdownItem>
                           {this.props.dropdown.map((map) => (
                             <DropdownItem
@@ -157,16 +175,11 @@ class Home extends Component {
                   </div>
                 </Row>
               </div>
-
-              <h4>
-                {" "}
-                Total <Badge color="danger">LIVE</Badge>
-              </h4>
-
+              <h1></h1>
               <div>
                 <Row className="left-rows">
                   <Col sm="4" className="col-card">
-                    <Card body inverse color="danger">
+                    <Card body inverse style={{ backgroundColor: "#0080ff", borderColor: "#000000" }}>
                       <CardTitle className="card-title">Confirmed</CardTitle>
                       <CardText className="card-text">
                         {numeral(this.props.currentCountry.cases).format("0,0")}
@@ -174,7 +187,7 @@ class Home extends Component {
                     </Card>
                   </Col>
                   <Col sm="4">
-                    <Card body inverse color="success">
+                     <Card body inverse style={{ backgroundColor: "#33cc33", borderColor: "#000000" }}>
                       <CardTitle className="card-title">Recovered</CardTitle>
                       <CardText className="card-text">
                         {numeral(this.props.currentCountry.recovered).format(
@@ -187,7 +200,7 @@ class Home extends Component {
                     <Card
                       body
                       inverse
-                      style={{ backgroundColor: "#333", borderColor: "#333" }}
+                      style={{ backgroundColor: "#ff0000", borderColor: "#000000" }}
                     >
                       <CardTitle className="card-title">Deaths</CardTitle>
                       <CardText className="card-text">
@@ -203,9 +216,9 @@ class Home extends Component {
                   Today <Badge color="danger">LIVE</Badge>
                 </h4>
 
-                <Row>
+                <Row className="left-rows">
                   <Col sm="4">
-                    <Card body inverse color="danger">
+                    <Card body inverse style={{ backgroundColor: "#0080ff", borderColor: "#000000" }}>
                       <CardTitle className="card-title">Confirmed</CardTitle>
                       <CardText className="card-text">
                         {numeral(this.props.currentCountry.todayCases).format(
@@ -215,7 +228,7 @@ class Home extends Component {
                     </Card>
                   </Col>
                   <Col sm="4">
-                    <Card body inverse color="success">
+                    <Card body inverse style={{ backgroundColor: "#33cc33", borderColor: "#000000" }}>
                       <CardTitle className="card-title">Recovered</CardTitle>
                       <CardText className="card-text">
                         {numeral(
@@ -228,7 +241,7 @@ class Home extends Component {
                     <Card
                       body
                       inverse
-                      style={{ backgroundColor: "#333", borderColor: "#333" }}
+                      style={{ backgroundColor: "#ff0000", borderColor: "#000000" }}
                     >
                       <CardTitle className="card-title">Deaths</CardTitle>
                       <CardText className="card-text">
@@ -240,7 +253,7 @@ class Home extends Component {
                   </Col>
                 </Row>
                 <Link to="/moreInfo">
-                  <Button className="button-moreinfo" color="info">
+                  <Button className="button-moreinfo" color="danger">
                     More Information
                   </Button>{" "}
                 </Link>
@@ -252,9 +265,9 @@ class Home extends Component {
             <h4>
               {this.props.currentCountry.affectedCountries} Countries Affected
             </h4>
-            <div style={{ overflow: "auto", height: "630px" }}>
-              <Table striped>
-                <thead>
+            <div className="header" style={{ overflow: "auto", height: "630px" }}>
+              <Table hover borderless responsive> 
+                <thead> 
                   <tr>
                     <th>Country</th>
                     <th>Cases</th>
@@ -285,7 +298,7 @@ class Home extends Component {
             </div>
           </Col>
         </Row>
-        <h3>Some News Upadate</h3>
+        <h3>Some News Update</h3>
         <Row>
           {this.props.newscovid === [] ? (
             <Spinner type="grow" color="success" />
@@ -296,7 +309,7 @@ class Home extends Component {
                   <CardImg
                     top
                     width="100%"
-                    style={{ width: "280px", height: "300px" }}
+                    style={{ width: "300px", height: "300px" }}
                     src={map.urlToImage === null ? noimage : map.urlToImage}
                     alt="Card image cap"
                   />

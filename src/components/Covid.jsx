@@ -1,4 +1,4 @@
-import logo from "../images/mask.jpg";
+import logo from "../images/mask.png";
 import ReactPlayer from "react-player";
 import { Container, Row, Col, Collapse, CardBody } from "reactstrap";
 import { Card, Button } from "react-bootstrap";
@@ -51,27 +51,24 @@ export default class Covid extends Component {
         <Container>
           <Row>
             <Col>
-              <h3 className="text-left">What is COVID-19?</h3>
+              <h3 className="text-left" >What is COVID-19 ?</h3>
               <ReactPlayer
                 width="100%"
-                height="300px"
+                height="400px"
                 controls
-                url="https://www.youtube.com/watch?v=OZcRD9fV7jo"
+                url="https://www.youtube.com/watch?v=i0ZabxXmH4Y"
               />
             </Col>
           </Row>
 
-          <div className="card bg-primary text-white ">
-            <div className="card-body" style={{ fontSize: "20px" }}>
-              Coronavirus Disease 2019 (COVID-19)
-              <img src={logo} alt="logo" width="40%" />
-            </div>
+          <div className="card bg-secondary text-white ">
+              <img src={logo} alt="logo" width="100%" height="200px" />
           </div>
           <div className="text-left">
-            <h1 style={{ fontSize: "18px", margintop: "2%" }}>
+            <h1 style={{ fontSize: "25px", fontWeight:"bold"}}>
               How Covid-19 Spreads
             </h1>
-            <p>
+            <p style={{fontSize: "18px"}}>
               COVID-19 is thought to spread mainly through close contact from
               person-to-person. Some people without symptoms may be able to
               spread the virus. We are still learning about how the virus
