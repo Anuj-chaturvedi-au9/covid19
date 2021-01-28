@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/About.css';
-import anuj from '../images/im2.gif';
-import piyush from '../images/im2.gif';
+import anuj from '../images/anuj.gif';
+import piyush from '../images/piyush.gif';
 
 export default class About extends Component {
     constructor(props) {
@@ -59,12 +59,12 @@ export default class About extends Component {
                     >
                         <div className="image-container">
                             <img src={anuj} />
-                            <b>Anuj Chaturvedi</b>
+                            <h1><b>Anuj Chaturvedi</b></h1>
                             <p className="desig">Aryabhata Batch - AttainU</p>
                         </div>
                         <div className="image-container">
                             <img src={piyush} />
-                            <b>Piyush Chaturvedi</b>
+                            <h1><b>Piyush Chaturvedi</b></h1>
                             <p className="desig">Aryabhata Batch - AttainU</p>
                         </div>
                     </div>
