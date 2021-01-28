@@ -1,92 +1,117 @@
-import React, { Component } from 'react';
-import '../styles/About.css';
-import anuj from '../images/anuj.gif';
-import piyush from '../images/piyush.gif';
+import React, { Component } from "react";
+import "../styles/About.css";
+import anuj from "../images/anuj.gif";
+import piyush from "../images/piyush.gif";
 
 export default class About extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <>
+        <center>
+          <b
+            style={{
+              fontFamily: "arch",
+              fontSize: 50,
+            }}
+          >
+            Who we are ?
+          </b>
+          <p
+            style={{
+              fontFamily: "arch",
+              width: window.innerWidth > 800 ? "50%" : window.innerWidth,
+            }}
+          >
+            We are a group of dedicated students of AttainU on a mission to help
+            the public in these corona effected situation as a part of Our
+            frontend project that have to do as part of learning ReactJS App. We
+            try to provide latest updates about Covid19 from MoHFW, WHO, GoK
+            Direct.{" "}
+          </p>
+          <b
+            style={{
+              fontFamily: "arch",
+              fontSize: 50,
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+          >
+            Meet Our Team Members
+          </b>
+          <br />
+          <br />
+          <div
+            style={{
+              display: "flex",
 
-        }
-    }
-    render() {
-        return (
-            <>
+              fontFamily: "arch",
+              justifyContent: "center",
+            }}
+          >
+            <div className="image-container">
+              <img src={anuj} alt ="anuj" />
+              <h1>
+                <b>Anuj Chaturvedi</b>
+              </h1>
+              <h2>
+                <b>1anujchaturvedi.ac@gmail.com</b>
+              </h2>
+              <p className="desig">Aryabhata Batch - AttainU</p>
+            </div>
+            <div className="image-container">
+              <img src={piyush} alt ="piyush"/>
+              <h1>
+                <b>Piyush Chaturvedi</b>
+              </h1>
+              <h2>
+                <b>piyush1.chatur@gmail.com</b>
+              </h2>
+              <p className="desig">Aryabhata Batch - AttainU</p>
+            </div>
+          </div>
 
-                <center>
-                    <b
-                        style={{
+          <h3>Contact Us</h3>
+          <p>
+            <i className="fa fa-envelope"></i> Mail us : attainu@gmail.com
+          </p>
+          <p>
+            <i className="fa fa-phone" /> Phone : +91 9680668287
+          </p>
 
-                            fontFamily: "arch",
-                            fontSize: 50
-                        }}
-                    >
-                        Who we are ?
-            </b>
-                    <p
-                        style={{
-
-                            fontFamily: "arch",
-                            width: window.innerWidth > 800 ? "50%" : window.innerWidth
-                        }}
-                    >
-                        We are a group of dedicated students of AttainU on a
-                        mission to help the public in these corona effected situation as a part of Our
-                        frontend project that have to do as part of learning ReactJS App. We try to provide
-              latest updates about Covid19 from MoHFW, WHO, GoK Direct.{" "}
-                    </p>
-                    <b
-                        style={{
-
-                            fontFamily: "arch",
-                            fontSize: 50,
-                            textAlign: "center",
-                            justifyContent: "center"
-                        }}
-                    >
-                        Meet Our Team Members
-            </b>
-                    <br />
-                    <br />
-                    <div
-                        style={{
-                            display: "flex",
-
-                            fontFamily: "arch",
-                            justifyContent: 'center'
-                        }}
-                    >
-                        <div className="image-container">
-                            <img src={anuj} />
-                            <h1><b>Anuj Chaturvedi</b></h1>
-                            <p className="desig">Aryabhata Batch - AttainU</p>
-                        </div>
-                        <div className="image-container">
-                            <img src={piyush} />
-                            <h1><b>Piyush Chaturvedi</b></h1>
-                            <p className="desig">Aryabhata Batch - AttainU</p>
-                        </div>
-                    </div>
-
-
-                    <h3>Contact Us</h3>
-                    <p><i className="fa fa-envelope" ></i> Mail us : attainu@gmail.com</p>
-                    <p><i className="fa fa-phone" />  Phone : +91 98654 55429</p>
-
-
-                    <div >
-                        <a className="fa fa-facebook" style={{ margin: 20, color: ' #3b5998', fontSize: 30, textDecoration: 'none' }} href="#" />
-                        <a className="fa fa-instagram" style={{ margin: 20, fontSize: 30, textDecoration: 'none' }} href="#" />
-                        <a className="fa fa-youtube" style={{ margin: 20, color: ' #000', fontSize: 30, textDecoration: 'none' }} href="#" />
-
-                    </div>
-                </center>
-                <br />
-
-
-               
-            </>
-        );
-    }
+          <div>
+            <a
+              className="fa fa-facebook"
+              style={{
+                margin: 20,
+                color: " #3b5998",
+                fontSize: 30,
+                textDecoration: "none",
+              }}
+              href="#"
+            />
+            <a
+              className="fa fa-instagram"
+              style={{ margin: 20, fontSize: 30, textDecoration: "none" }}
+              href="#"
+            />
+            <a
+              className="fa fa-youtube"
+              style={{
+                margin: 20,
+                color: " #000",
+                fontSize: 30,
+                textDecoration: "none",
+              }}
+              href="#"
+            />
+          </div>
+        </center>
+        <br />
+      </>
+    );
+  }
 }
